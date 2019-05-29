@@ -22,11 +22,11 @@ namespace BinoOAuthFramework.ProtectedServer.Lib.Entities
         /// <summary>
         /// The private key shared with OAuth Server
         /// </summary>
-        public string ShareKeyWithOAuthProtectedServer { get; set; }
+        public string ShareKeyOAuthWithProtectedServer { get; set; }
 
         /// <summary>
         ///  The private IV shared with OAuth Server
         /// </summary>
-        public string ShareIVWithOAuthProtectedServer { get; set; }
+        public string ShareIVOAuthWithProtectedServer { get; set; }
     }
 }

@@ -10,4 +10,12 @@
     <None Remove="OAuthRegister\Core\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Binodata.Crypto.Lib\Binodata.Crypto.Lib\Binodata.Crypto.Lib.csproj" />
+  </ItemGroup>
+
 </Project>
