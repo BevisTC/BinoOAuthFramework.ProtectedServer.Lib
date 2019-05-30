@@ -15,17 +15,21 @@ namespace BinoOAuthFramework.ProtectedServer.Lib
         private IAESCrypter aesCrypter;
         private ProtectedServerModel protectedServer;
 
-        public OAuthNoticeVerifier(IAESCrypter aescrypter, ProtectedServerModel server)
+        protected OAuthNoticeVerifier() { }
+
+        public OAuthNoticeVerifier(ProtectedServerModel server)
         {
-            if (aesCrypter == null)
-            {
-                aesCrypter = new LocalMachineAESCrypter(server.ShareKeyOAuthWithProtectedServer,
-                    server.ShareIVOAuthWithProtectedServer);
-            }
-            this.aesCrypter = aescrypter;
+            this.aesCrypter = new LocalMachineAESCrypter(server.ShareKeyOAuthWithProtectedServer,
+                   server.ShareIVOAuthWithProtectedServer);
             this.protectedServer = server;
         }
 
+        public OAuthNoticeVerifier(IAESCrypter aescrypter, ProtectedServerModel server)
+        {
+            this.aesCrypter = aescrypter;
+            this.protectedServer = server;
+        }
+        
 
         /// <summary>
         /// OAuth Server呼叫Protected Server進行通知驗證
@@ -50,7 +54,7 @@ namespace BinoOAuthFramework.ProtectedServer.Lib
                 throw new RequestProtectedServerNotEqualExceptoin("The protected server's application id is not equal with the ProtectedId which is send from OAuth server ");
             }
 
-            if (UnixTimeGenerator.GetUtcNowUnixTime() > authShareProtectedServerCypherTextModel.ExpiredTime)
+            if (GetUtcNowUnixTime() > authShareProtectedServerCypherTextModel.ExpiredTime)
             {
                 throw new OAuthShareCypherWithProtectedServerExpiredException("OAuth Send Secret message like Cypher text is expired, can not use this secret");
             }
@@ -64,13 +68,20 @@ namespace BinoOAuthFramework.ProtectedServer.Lib
             return authShareProtectedServerCypherTextModel;
         }
 
+        public virtual long GetUtcNowUnixTime()
+        {
+            return UnixTimeGenerator.GetUtcNowUnixTime();
+        }
+
         private SymCryptoModel GetShareSecretClientWithProtectedSymModel(string key, string iv, string clientId)
         {
             string theShareSecretKeyClientWithProtected = GetClientProtectedCryptoStr(key, clientId);
             string theShareSecretIVClientWithProtected = GetClientProtectedCryptoStr(iv, clientId).Substring(0, 16);
 
-            SymCryptoModel shareSecretClientWithProtectedModel = new SymCryptoModel(theShareSecretKeyClientWithProtected
-                , theShareSecretIVClientWithProtected);
+            SymCryptoModel shareSecretClientWithProtectedModel = new SymCryptoModel(){
+                Key = theShareSecretKeyClientWithProtected,
+                IV = theShareSecretIVClientWithProtected,
+            };
 
             return shareSecretClientWithProtectedModel;
         }
