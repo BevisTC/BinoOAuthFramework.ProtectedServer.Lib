@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace BinoOAuthFramework.ProtectedServer.Lib.Entities
+namespace Bino.ProtectedServer.OAuthClientCredentialsFlow.Lib.Entities
 {
     /// <summary>
     /// 受保護伺服器 使用的領域模型

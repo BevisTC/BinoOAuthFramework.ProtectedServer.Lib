@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace BinoOAuthFramework.ProtectedServer.Lib.OAuthRegister.Model.Authen.ResrcProtector
+namespace Bino.ProtectedServer.OAuthClientCredentialsFlow.Lib.OAuthRegister.Model.Authen.ResrcProtector
 {
     /// <summary>
     /// Resrc Protector 確認 Auth Server 回傳值 資料模型

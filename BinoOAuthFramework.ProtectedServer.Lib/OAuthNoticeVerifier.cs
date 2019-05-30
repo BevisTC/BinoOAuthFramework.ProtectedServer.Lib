@@ -1,14 +1,14 @@
 ﻿using Binodata.Crypto.Lib;
 using Binodata.Crypto.Lib.UseCases;
 using Binodata.Crypto.Lib.Utility;
-using BinoOAuthFramework.ProtectedServer.Lib.Entities;
-using BinoOAuthFramework.ProtectedServer.Lib.Errors;
-using BinoOAuthFramework.ProtectedServer.Lib.OAuthRegister.Model.Authen.ResrcProtector;
-using BinoOAuthFramework.ProtectedServer.Lib.OAuthRegister.Model.Common;
+using Bino.ProtectedServer.OAuthClientCredentialsFlow.Lib.Entities;
+using Bino.ProtectedServer.OAuthClientCredentialsFlow.Lib.Errors;
+using Bino.ProtectedServer.OAuthClientCredentialsFlow.Lib.OAuthRegister.Model.Authen.ResrcProtector;
+using Bino.ProtectedServer.OAuthClientCredentialsFlow.Lib.OAuthRegister.Model.Common;
 using Newtonsoft.Json;
 using System;
 
-namespace BinoOAuthFramework.ProtectedServer.Lib
+namespace Bino.ProtectedServer.OAuthClientCredentialsFlow.Lib
 {
     public class OAuthNoticeVerifier
     {
