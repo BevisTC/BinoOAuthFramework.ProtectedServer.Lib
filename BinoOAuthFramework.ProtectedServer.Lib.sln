@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.539
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinoOAuthFramework.ProtectedServer.Lib", "BinoOAuthFramework.ProtectedServer.Lib\BinoOAuthFramework.ProtectedServer.Lib.csproj", "{D2167C41-2ADE-4955-8718-9AC0F5ADAC27}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bino.ProtectedServer.OAuthClientCredentialsFlow.Lib", "BinoOAuthFramework.ProtectedServer.Lib\Bino.ProtectedServer.OAuthClientCredentialsFlow.Lib.csproj", "{D2167C41-2ADE-4955-8718-9AC0F5ADAC27}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{7F7FC84C-6A97-4F6D-84A2-1ED08DE66734}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Binodata.Crypto.Lib", "..\Binodata.Crypto.Lib\Binodata.Crypto.Lib\Binodata.Crypto.Lib.csproj", "{1A69F32E-397D-4405-A957-B8B31C22AFF1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +19,16 @@ Global
 		{D2167C41-2ADE-4955-8718-9AC0F5ADAC27}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2167C41-2ADE-4955-8718-9AC0F5ADAC27}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2167C41-2ADE-4955-8718-9AC0F5ADAC27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A69F32E-397D-4405-A957-B8B31C22AFF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A69F32E-397D-4405-A957-B8B31C22AFF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A69F32E-397D-4405-A957-B8B31C22AFF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A69F32E-397D-4405-A957-B8B31C22AFF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1A69F32E-397D-4405-A957-B8B31C22AFF1} = {7F7FC84C-6A97-4F6D-84A2-1ED08DE66734}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C8797B4C-B183-4E35-B7F5-50B67DD42158}
