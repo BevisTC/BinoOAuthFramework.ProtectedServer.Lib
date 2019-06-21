@@ -13,12 +13,12 @@ namespace Bino.ProtectedServer.OAuthClientCredentialsFlow.Lib.Entities
         /// <summary>
         /// 客戶端識別Id
         /// </summary>
-        internal ClientTempIdentityModel ClientTempId { get; set; }
+        public ClientTempIdentityModel ClientTempId { get; set; }
 
         /// <summary>
         /// 客戶端識別Id'
         /// </summary>
-        internal ClientTempIdentityModel ClientTempIdPrime { get; set; }
+        public ClientTempIdentityModel ClientTempIdPrime { get; set; }
 
         /// <summary>
         /// 目前授權計數
