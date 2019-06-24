@@ -70,37 +70,37 @@ namespace Bino.ProtectedServer.OAuthClientCredentialsFlow.Lib
         /// <summary>
         /// 加鹽值
         /// </summary>
-        internal string Salt { get; set; }
+        public string Salt { get; set; }
 
         /// <summary>
         /// TIDC
         /// </summary>
-        internal ClientTempIdentityModel ClientTempId { get; set; }
+        public ClientTempIdentityModel ClientTempId { get; set; }
 
         /// <summary>
         /// 資源保護者Id
         /// </summary>
-        internal string ProtectedId { get; set; }
+        public string ProtectedId { get; set; }
 
         /// <summary>
         /// 雜湊值
         /// </summary>
-        internal string HashValue { get; set; }
+        public string HashValue { get; set; }
 
         /// <summary>
         /// 失效時間
         /// </summary>
-        internal long ExpiredTime { get; set; }
+        public long ExpiredTime { get; set; }
 
         /// <summary>
         /// 授權次數
         /// </summary>
-        internal int AuthZTimes { get; set; }
+        public int AuthZTimes { get; set; }
 
         /// <summary>
         ///  Client 與 Resource Protector 的KEY,IV資料物件
         /// </summary>
-        internal SymCryptoModel ClientProtectedCryptoModel { get; set; }
+        public SymCryptoModel ClientProtectedCryptoModel { get; set; }
 
     }
 }
